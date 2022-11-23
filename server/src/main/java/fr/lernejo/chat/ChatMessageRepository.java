@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Service
-@Repository
 public class ChatMessageRepository {
 
     private final List<String> messages;
@@ -24,7 +24,7 @@ public class ChatMessageRepository {
     }
 
     public List<String> getLastTenMessages() {
-        return messages.subList(0, Math.min(messages.size(), 10));
+        return this.messages;
     }
 
 }
